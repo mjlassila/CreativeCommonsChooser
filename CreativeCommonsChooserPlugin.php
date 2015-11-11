@@ -56,8 +56,10 @@ class CreativeCommonsChooserPlugin extends Omeka_Plugin_AbstractPlugin
     public function hookInitialize()
     {
         add_shortcode('cc', array($this, 'shortcodeCreativeCommons'));
-    }
+        add_translation_source(dirname(__FILE__) . '/languages');
 
+    }
+    
     /**
      * Install the plugin.
      */
